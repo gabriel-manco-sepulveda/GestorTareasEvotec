@@ -1,0 +1,92 @@
+﻿@page "/tareas"
+
+@using Evotec.Shared;
+@using CurrieTechnologies.Razor.SweetAlert2;
+@using Evotec.Client.Services;
+
+@inject SweetAlertService Swal;
+@inject ITareaService tareaService;
+
+<h3>Tareas</h3>    
+
+<a class="btn btn-success btn-sm mb-3" href="tarea">Nueva Tarea</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>DESCRIPCION</th>
+            <th>ESTADO</th>
+            <th>FECHA iNICIO</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (listaTarea == null)
+        {
+
+            <tr>
+                <td colspan="5" align="center">
+                    <img style="width:50px" src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" />
+                </td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var item in listaTarea)
+            {
+                <tr>
+                    <td>@item.Descripcion</td>
+                    <td>@item.Estado!.Nombre</td>
+                    <td>@item.FechaInicio.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="tarea/@item.IdTarea">
+                            <i class="oi oi-pencil"></i>
+                        </a>
+                        <button type="button" class="btn btn-danger btn-sm ms-2" @onclick="(() => Eliminar(item.IdTarea))">
+                            <i class="oi oi-trash"></i>
+                        </button>
+
+                    </td>
+                </tr>
+            }
+        }
+
+
+
+    </tbody>
+</table>
+
+
+@code {
+    List<TareaDTO>? listaTarea = null;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        listaTarea = await tareaService.Lista();
+    }
+
+    private async Task Eliminar(int id)
+    {
+        var resultado = await Swal.FireAsync(new SweetAlertOptions
+            {
+                Title = "Eliminar Tarea",
+                Text = "Deseas eliminar Tarea?",
+                Icon = SweetAlertIcon.Question,
+                ShowCancelButton = true
+            });
+
+        if (resultado.IsConfirmed)
+        {
+            var eliminado = await tareaService.Eliminar(id);
+
+            if (eliminado)
+                listaTarea = listaTarea!.FindAll(e => e.IdTarea != id);
+
+        }
+
+
+    }
+
+}

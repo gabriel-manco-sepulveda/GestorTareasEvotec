@@ -1,0 +1,95 @@
+﻿@page "/tarea"
+
+@page "/tarea/{idTareaEditar:int}"
+
+@using Evotec.Shared
+@inject HttpClient Http
+@* @using Microsoft.AspNetCore.Authorization;  *@
+@* @attribute [Authorize(Roles = "Administrador")] *@
+
+@using Evotec.Client.Services;
+
+@inject ITareaService tareaService;
+@inject IEstadoService estadoService;
+@inject NavigationManager navegacion;
+
+<h3>@titulo</h3>
+
+<EditForm Model="tarea" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+
+    <div class="mb-3">
+        <label class="form-label">Descripcion</label>
+        <InputText class="form-control" @bind-Value="tarea.Descripcion"></InputText>
+        <ValidationMessage For="@(() => tarea.Descripcion)"></ValidationMessage>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Estado</label>
+        <InputSelect class="form-select" @bind-Value="tarea.IdEstado">
+            <option value="0">-- Seleccionar --</option>
+            @foreach(var item in listaEstado)
+            {
+                <option value="@item.IdEstado">@item.Nombre</option>
+            }
+        </InputSelect>
+        <ValidationMessage For="@(() => tarea.IdEstado)"></ValidationMessage>
+    </div>
+    
+    <div class="mb-3">
+        <label class="form-label">Fecha Inicio</label>
+        <InputDate class="form-control" @bind-Value="tarea.FechaInicio"></InputDate>
+        <ValidationMessage For="@(() => tarea.FechaInicio)"></ValidationMessage>
+    </div>
+
+    <button class="btn btn-primary" type="submit">
+        @btnTexto
+    </button>
+
+    <a class="btn btn-warning" href="tareas">Volver</a>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int idTareaEditar { get; set; } = 0;
+
+
+    string titulo = string.Empty;
+    string btnTexto = string.Empty;
+
+    TareaDTO tarea = new TareaDTO();
+    List<EstadoDTO> listaEstado = new List<EstadoDTO>();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        if(idTareaEditar != 0)
+        {
+            tarea = await tareaService.Buscar(idTareaEditar);
+            btnTexto = "Actualizar Tarea";
+            titulo = "Editar Tarea";
+        }
+        else
+        {
+            tarea.FechaInicio = DateTime.Today;
+            btnTexto = "Guardar Tarea";
+            titulo = "Nueva Tarea";
+        }
+        listaEstado = await estadoService.Lista();
+    }
+
+    private async Task OnValidSubmit()
+    {
+        int idDevuelto = 0;
+        if (idTareaEditar == 0)
+            idDevuelto = await tareaService.Guardar(tarea);
+        else
+            idDevuelto = await tareaService.Editar(tarea);
+
+
+        if (idDevuelto != 0)
+            navegacion.NavigateTo("/tareas");
+
+    }
+
+
+}

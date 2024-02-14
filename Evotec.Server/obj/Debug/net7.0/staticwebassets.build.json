@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ULQCxO16ysOr8spBd8qXggfyKfguFUKFJco1JNRwyZs=",
+  "Source": "Evotec.Server",
+  "BasePath": "_content/Evotec.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

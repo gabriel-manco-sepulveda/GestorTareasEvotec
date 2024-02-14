@@ -1,0 +1,11 @@
+C:\Users\gabom\source\repos\Evotec\Evotec.Shared\bin\Debug\net7.0\Evotec.Shared.deps.json
+C:\Users\gabom\source\repos\Evotec\Evotec.Shared\bin\Debug\net7.0\Evotec.Shared.dll
+C:\Users\gabom\source\repos\Evotec\Evotec.Shared\bin\Debug\net7.0\Evotec.Shared.pdb
+C:\Users\gabom\source\repos\Evotec\Evotec.Shared\obj\Debug\net7.0\Evotec.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabom\source\repos\Evotec\Evotec.Shared\obj\Debug\net7.0\Evotec.Shared.AssemblyInfoInputs.cache
+C:\Users\gabom\source\repos\Evotec\Evotec.Shared\obj\Debug\net7.0\Evotec.Shared.AssemblyInfo.cs
+C:\Users\gabom\source\repos\Evotec\Evotec.Shared\obj\Debug\net7.0\Evotec.Shared.csproj.CoreCompileInputs.cache
+C:\Users\gabom\source\repos\Evotec\Evotec.Shared\obj\Debug\net7.0\Evotec.Shared.dll
+C:\Users\gabom\source\repos\Evotec\Evotec.Shared\obj\Debug\net7.0\refint\Evotec.Shared.dll
+C:\Users\gabom\source\repos\Evotec\Evotec.Shared\obj\Debug\net7.0\Evotec.Shared.pdb
+C:\Users\gabom\source\repos\Evotec\Evotec.Shared\obj\Debug\net7.0\ref\Evotec.Shared.dll
