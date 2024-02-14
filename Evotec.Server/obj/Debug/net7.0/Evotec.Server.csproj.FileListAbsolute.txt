@@ -76,3 +76,4 @@ C:\Users\gabom\source\repos\Evotec\Evotec.Server\obj\Debug\net7.0\Evotec.Server.
 C:\Users\gabom\source\repos\Evotec\Evotec.Server\obj\Debug\net7.0\ref\Evotec.Server.dll
 C:\Users\gabom\source\repos\Evotec\Evotec.Server\bin\Debug\net7.0\Evotec.Shared.dll
 C:\Users\gabom\source\repos\Evotec\Evotec.Server\bin\Debug\net7.0\Evotec.Shared.pdb
+C:\Users\gabom\source\repos\Evotec\Evotec.Server\obj\Debug\net7.0\Evotec.Server.sourcelink.json

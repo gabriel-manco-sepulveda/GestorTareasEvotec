@@ -844,3 +844,4 @@ C:\Users\gabom\source\repos\Evotec\Evotec.Client\bin\Debug\net7.0\Blazored.Sessi
 C:\Users\gabom\source\repos\Evotec\Evotec.Client\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Authorization.dll
 C:\Users\gabom\source\repos\Evotec\Evotec.Client\obj\Debug\net7.0\compressed\c6bcxe3b4a.gz
 C:\Users\gabom\source\repos\Evotec\Evotec.Client\obj\Debug\net7.0\compressed\laoxp39lgp.gz
+C:\Users\gabom\source\repos\Evotec\Evotec.Client\obj\Debug\net7.0\Evotec.Client.sourcelink.json

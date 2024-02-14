@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Evotec.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fed1a78865ce47a9bf15a6eb1abc49376ef4f38d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Evotec.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Evotec.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

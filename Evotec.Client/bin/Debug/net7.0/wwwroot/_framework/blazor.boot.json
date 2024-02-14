@@ -1,7 +1,7 @@
 {
   "entryAssembly": "Evotec.Client",
   "resources": {
-    "hash": "sha256-UbqKloot2rfYtoocjuIT0NDGwqgSP8KpGj69Arvjwyk=",
+    "hash": "sha256-/QyzIl8kzKDy37pCTW1hKCAe6fm2LdWb/My5lGQy85Y=",
     "runtime": {
       "dotnet.7.0.15.tv5tlwg9qh.js": "sha256-MHuxwxeVFybuBBTAWeZrvoStZpW+H4ThSaRcFvrfqXM=",
       "dotnet.timezones.blat": "sha256-aHk3Pm2JXopn6UPLJtovAqIdIk8GyIMzGm450cli9UE=",
@@ -206,11 +206,11 @@
       "netstandard.dll": "sha256-ohOFXxRJKiyPbitdA1y5ebD9fSAGELDRVmhDM2nVdtA=",
       "System.Private.CoreLib.dll": "sha256-7Y6AhJbgMptcdman3NtSEbcJV520wGmyxB8QvZwrUmc=",
       "Evotec.Shared.dll": "sha256-iZqOXOgX7omf8KcSEG9smwh7AD8Mhp9vMrabrMHf2yI=",
-      "Evotec.Client.dll": "sha256-9v4j5MdyYcB1FZR21Bs3M69c9T85TdhdHjZe3oXdYZY="
+      "Evotec.Client.dll": "sha256-kE7myzzvg7c8HwMxy8PpyNzLDwNxrtEN51WJ/BpqSHA="
     },
     "pdb": {
       "Evotec.Shared.pdb": "sha256-J5Zh0fo5CLQb69171ZYfAifVHpDSYOZb448dUcJJK1A=",
-      "Evotec.Client.pdb": "sha256-ajzFkHHCnn8savtmoqYZNBdOWtGGje3HAEI1RlpggpE="
+      "Evotec.Client.pdb": "sha256-GYSGbX8s48+x8UU5EKSoZn7prlMubB9BOb/v7gnxDOk="
     },
     "runtimeAssets": {
       "dotnet.wasm": {

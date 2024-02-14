@@ -5,7 +5,7 @@ using Evotec.Server.Models;
 using Evotec.Shared;
 using Microsoft.EntityFrameworkCore;
 
-namespace BlazorCrud.Server.Controllers
+namespace Evotec.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
